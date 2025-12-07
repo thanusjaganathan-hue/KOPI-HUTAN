@@ -1,0 +1,320 @@
+/* style.css */
+
+/* --- General Reset and Body Styling --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f7f7f7; /* Light background */
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #4B3832; /* Deep Coffee Brown */
+    margin-bottom: 0.5em;
+}
+
+section {
+    padding: 60px 5%;
+    min-height: 80vh; /* Ensures sections take up a good amount of vertical space */
+}
+
+/* --- Header and Navigation --- */
+header {
+    background-color: #6F4E37; /* Warm Coffee Brown */
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Gold highlight */
+}
+
+/* --- Hero/Carousel Section --- */
+.hero-section {
+    background: url('https://www.aeki-aice.org/wp-content/uploads/2025/07/Coffee-Signature-Menu.webp') no-repeat center center/cover;
+    color: white;
+    height: 90vh; /* Full viewport height minus header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.carousel-container {
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for text readability */
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.carousel-slide h1 {
+    font-size: 3.5em;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.carousel-slide p {
+    font-size: 1.5em;
+    color: #ddd;
+}
+
+/* --- Menu Section (Cards) --- */
+.menu-section {
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.menu-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #6F4E37;
+}
+
+/* New style for category headers */
+.menu-category-header {
+    font-size: 2em;
+    color: #6F4E37;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #EDE8E0;
+    display: inline-block;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-card {
+    background-color: #fcfcfc;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.menu-card h3 {
+    color: #4B3832;
+    margin: 0 15px 5px;
+}
+
+.menu-card p {
+    padding: 0 15px;
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.price {
+    display: block;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #6F4E37;
+}
+
+/* --- Order Section --- */
+.order-section {
+    background-color: #EDE8E0; /* Creamy light brown */
+    text-align: center;
+}
+
+.order-section h2 {
+    color: #4B3832;
+    margin-bottom: 30px;
+}
+
+.order-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.order-content p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+/* New style for labels to align them above selects/inputs */
+.order-form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #4B3832; /* Deep Coffee Brown */
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.order-form button {
+    background-color: #6F4E37;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.order-form button:hover {
+    background-color: #4B3832;
+}
+
+/* --- Location Section (Map and Info) --- */
+.location-section {
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.location-section h2 {
+    margin-bottom: 40px;
+}
+
+.location-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.store-info {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #6F4E37;
+    border-radius: 5px;
+}
+
+.store-info h3 {
+    border-bottom: 2px solid #6F4E37;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.store-info p {
+    margin-bottom: 10px;
+    font-size: 1.05em;
+}
+
+.tagline {
+    font-style: italic;
+    margin-top: 20px !important;
+    color: #6F4E37;
+    font-weight: 600;
+}
+
+.google-map {
+    flex: 2;
+    min-width: 300px;
+    height: 450px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden; /* Important for the iframe */
+}
+
+.google-map iframe {
+    display: block; /* Removes any default spacing below iframe */
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5em;
+    }
+    
+    .location-container {
+        flex-direction: column;
+    }
+}
